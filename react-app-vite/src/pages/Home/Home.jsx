@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+import Card from '../../components/Card'
+import './Home.styles.css'
+
 const Home = () => {
     const [characterList, setCharacterList] = useState([]) //traemos un const para traer el personaje, traemos la lista de personajes y la funcion que nos permitira actualizarlo/ tambien un useState con un array vacio para manejar la informacion
 
@@ -25,7 +28,9 @@ const Home = () => {
                             key={character.id} //llave unica
                             onClick={() => handleSelectedCard(character)}
                         >
-                            <Card character={character} />
+                            <Card character={character}  //el atributo que le damos a este va a ser el character que traemos de la lista
+
+                            />
                         </li>
                     ))}
                 </ul>
