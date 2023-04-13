@@ -10,27 +10,30 @@ const Home = () => {
             .catch(console.error);
 
     }, []); //trae una funcion en la que llamamos otra funcion, puede o no tener dependecias, pero en nuestro casi, si las tiene []
-    return <main>
+    return (
+        <main>
 
-        <h1 className="title">Este es el taller de React</h1>
-        <p className="text">
-            Para este taller vamos a usar el api de Rick and Morty
-        </p>
-
-
-        <div className="card">
-            <picture className="card___image">
-                <img src='imagen' alt='nombre' />
-            </picture>
-            <h3 className="card__title ">nombre</h3>
-            <p className="card__text">
-                species: <span>especie</span>
+            <h1 className="title">Este es el taller de React</h1>
+            <p className="text">
+                Para este taller vamos a usar el api de Rick and Morty
             </p>
-        </div>
+
+            <section className="container___list">
+                <ul className="list">
+                    {characterList.map((character) => (
+                        <li
+                            key={character.id} //llave unica
+                            onClick={() => handleSelectedCard(character)}
+                        >
+                            <Card character={character} />
+                        </li>
+                    ))}
+                </ul>
+            </section>
 
 
-
-    </main>;
+        </main>
+    );
 };
 
 export default Home;
