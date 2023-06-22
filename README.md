@@ -42,9 +42,9 @@ The project is organized as follows:
 
 - `src`: Contains the application source files.
   - `components`: Folder for the reusable components.
-  - Screens`: Folder for the application screens.
-  - app.js`: Entry point of the application.
-- android`: Contains the files related to the compilation and execution of the application in Android.
+  - `Screens`: Folder for the application screens.
+  - `app.js`: Entry point of the application.
+- `android`: Contains the files related to the compilation and execution of the application in Android.
 - `ios`: Contains the files related to the compilation and execution of the application on iOS.
 
 ## Contribution
